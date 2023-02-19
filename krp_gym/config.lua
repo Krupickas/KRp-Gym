@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Locale = 'cs'
+Config.Locale = 'en'
 
 Config.SkillSystem = 'b1skillz' -- gamz or b1skillz
 
