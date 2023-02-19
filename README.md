@@ -15,3 +15,12 @@ restart krp_gym
 Hello thank you for downloading my script if you need any help here is discord server
 
 -- discord.gg/Sc86GwsBUh
+Features
+
+-- Bench
+-- Chinups
+-- Situps
+-- Free Weight
+-- One hands
+-- flex muscle
+-- Bicycle
