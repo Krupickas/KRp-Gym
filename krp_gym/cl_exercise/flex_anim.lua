@@ -36,18 +36,16 @@ exports.qtarget:AddCircleZone("flex", vec3(-1212.6918, -1573.1927, 3.6074), 0.95
                 local lockZ = false
                 local ped = PlayerPedId()
              
-                local input = lib.inputDialog('How long', {'In milisecons so - 5 sec is 5000'})
+                local input = lib.inputDialog(_U('how_long_to_flex'), {_U('description')})
 
                 if not input then return end
                 local lockerNumber = tonumber(input[1])
 
                 local duration = lockerNumber
-
                 TaskPlayAnim(ped, animDict, animName, blendInSpeed, blendOutSpeed, duration, flag, playbackRate, lockX, lockY, lockZ)
-                SetEntityHeading(ped, 102.1825)
+                SetEntityHeading(ped, 116.3601)
                 
-
-                showBusySpinner('Flexing Muscle')
+                showBusySpinner(_U('flexing_muscle'))
                 Wait(lockerNumber)
                 hideBusySpinner()
                ClearPedTasks(PlayerPedId())
@@ -86,7 +84,7 @@ exports.qtarget:AddCircleZone("flex", vec3(-1209.0870, -1578.3057, 3.6080), 0.95
                 local lockZ = false
                 local ped = PlayerPedId()
              
-                local input = lib.inputDialog('How long to flex', {'In miliseconds so - 5 sec is 5000'})
+                local input = lib.inputDialog(_U('how_long_to_flex'), {_U('description')})
 
                 if not input then return end
                 local lockerNumber = tonumber(input[1])
@@ -95,7 +93,7 @@ exports.qtarget:AddCircleZone("flex", vec3(-1209.0870, -1578.3057, 3.6080), 0.95
                 TaskPlayAnim(ped, animDict, animName, blendInSpeed, blendOutSpeed, duration, flag, playbackRate, lockX, lockY, lockZ)
                 SetEntityHeading(ped, 116.3601)
                 
-                showBusySpinner('Flexing Muscle')
+                showBusySpinner(_U('flexing_muscle'))
                 Wait(lockerNumber)
                 hideBusySpinner()
                ClearPedTasks(PlayerPedId())
