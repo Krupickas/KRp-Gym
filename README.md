@@ -1,5 +1,4 @@
-# KRp-Gym
-
+# KRp-Gym QBCORE
 TOS 
 Dont sell script
 Dont use code without my permission
