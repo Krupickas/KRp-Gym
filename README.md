@@ -1,4 +1,4 @@
-# KRp-Gym ESX
+# KRp-Gym
 
 TOS 
 Dont sell script
