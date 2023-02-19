@@ -15,4 +15,12 @@ Locales['en'] = {
   ['you_had_bad_exericise'] = 'You had bad exercise',
   ['catching_breath'] = 'Gasping for breath',
 
+
+  -- busy spinner
+
+  ['flexing_muscle'] = 'Flexing muscle',
+
+  -- input dialog
+  ['how_long_to_flex'] = 'How long to flex ?',
+  ['description'] = 'In miliseconds so - 5 sec is 5000',
 }
