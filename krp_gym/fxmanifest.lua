@@ -11,15 +11,17 @@ Author 'Krupickas'
 lua54 'yes'
 shared_script {
   '@ox_lib/init.lua',
-  '@es_extended/imports.lua'
+  '@qb-core/shared/locale.lua',
+  'locales/en.lua',
+  'locales/*.lua'
 }
 
 client_scripts {
-  '@es_extended/locale.lua',
-  'locales/en.lua',
-  'locales/fr.lua',
-  'locales/sv.lua',
-  'locales/cs.lua',
+  '@PolyZone/client.lua',
+  '@PolyZone/BoxZone.lua',
+  '@PolyZone/EntityZone.lua',
+  '@PolyZone/CircleZone.lua',
+  '@PolyZone/ComboZone.lua',
   'config.lua',
   'cl_exercise/*.lua'
 }
