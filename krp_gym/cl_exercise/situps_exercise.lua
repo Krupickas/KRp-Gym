@@ -12,17 +12,24 @@ exports.qtarget:AddCircleZone("situps", vec3(-1201.2391, -1566.6486, 4.0158), 0.
                 SetEntityHeading(playerPed, 218.7526)
                 TaskStartScenarioInPlace(playerPed, "world_human_sit_ups", 0, true)
 Wait(5000)
-local situps = lib.skillCheck({'easy', 'easy', 'easy', 'easy', 'easy', {areaSize = 60, speedMultiplier = 1}, 'medium'})
-if situps then
-    print('yougood')
+local situpsa = lib.skillCheck({'easy', 'easy', 'easy', 'easy', 'easy', {areaSize = 60, speedMultiplier = 1}, 'medium'})
+if situpsa then
+    lib.notify({
+        title = 'Gym',
+        description = _U('you_had_good_exericise'),
+        type = 'success'
+    })
     ClearPedTasks(PlayerPedId())
     Wait(2000)
-    ClearArea(-1203.1309, -1565.3317, 4.6112, 25, true, true, false, false)
-    FreezeEntityPosition(playerPed, false)
+    if Config.SkillSystem == 'gamz' then
+        exports["gamz-skillsystem"]:UpdateSkill("Stamina", 0.5)
+        exports["gamz-skillsystem"]:UpdateSkill("Strength", 0.5)
+       elseif Config.SkillSystem == 'b1skillz' then
+        exports["B1-skillz"]:UpdateSkill("Stamina", 0.5)
+        exports["B1-skillz"]:UpdateSkill("Strength", 0.5)
+       end
 else
-    FreezeEntityPosition(playerPed, false)
     ClearPedTasks(PlayerPedId())
-    ClearArea(-1202.8291, -1565.1143, 4.6152, 1.0, true, true, false, false )
     Wait(4500)
     lib.progressBar({
         duration = 4000,
@@ -37,10 +44,6 @@ else
             clip = 'out_of_breath' 
         },
     })
-    Wait(2000)
-    ClearArea(-1203.1309, -1565.3317, 4.6112, 25, true, true, false, false)
-    Wait(2000)
-    ClearArea(-1203.1309, -1565.3317, 4.6112, 25, true, true, false, false)
 end
             end,
             icon = "fas fa-person",
