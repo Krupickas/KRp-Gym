@@ -86,8 +86,10 @@ if situps then
     FreezeEntityPosition(playerPed, false)
     if Config.SkillSystem == 'gamz' then
         exports["gamz-skillsystem"]:UpdateSkill("Stamina", 0.5)
+        exports["gamz-skillsystem"]:UpdateSkill("Strength", 0.5)
        elseif Config.SkillSystem == 'b1skillz' then
         exports["B1-skillz"]:UpdateSkill("Stamina", 0.5)
+        exports["B1-skillz"]:UpdateSkill("Strength", 0.5)
        end
 else
     lib.notify({
