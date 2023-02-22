@@ -12,8 +12,8 @@ exports.qtarget:AddCircleZone("chins", vec3(-1204.9618, -1563.9692, 4.6085), 0.9
                 SetEntityHeading(playerPed, 34.3727)
                 TaskStartScenarioInPlace(playerPed, "prop_human_muscle_chin_ups", 0, true)
 Wait(4300)
-local muscleweight = lib.skillCheck({'easy', 'easy', 'easy', 'easy', 'easy', {areaSize = 60, speedMultiplier = 1}, 'medium'})
-if situps then
+local chinups = lib.skillCheck({'easy', 'easy', 'easy', 'easy', 'easy', {areaSize = 60, speedMultiplier = 1}, 'medium'})
+if chinups then
     lib.notify({
         title = 'Gym',
         description = _U('you_had_good_exericise'),
@@ -74,8 +74,8 @@ exports.qtarget:AddCircleZone("chins2", vec3(-1199.9476, -1571.1968, 4.6096), 0.
                 SetEntityHeading(playerPed, 34.3727)
                 TaskStartScenarioInPlace(playerPed, "prop_human_muscle_chin_ups", 0, true)
 Wait(4300)
-local muscleweight = lib.skillCheck({'easy', 'easy', 'easy', 'easy', 'easy', {areaSize = 60, speedMultiplier = 1}, 'medium'})
-if situps then
+local chinups2 = lib.skillCheck({'easy', 'easy', 'easy', 'easy', 'easy', {areaSize = 60, speedMultiplier = 1}, 'medium'})
+if chinups2 then
     lib.notify({
         title = 'Gym',
         description = _U('you_had_good_exericise'),
@@ -86,10 +86,8 @@ if situps then
     FreezeEntityPosition(playerPed, false)
     if Config.SkillSystem == 'gamz' then
         exports["gamz-skillsystem"]:UpdateSkill("Stamina", 0.5)
-        exports["gamz-skillsystem"]:UpdateSkill("Strength", 0.5)
        elseif Config.SkillSystem == 'b1skillz' then
         exports["B1-skillz"]:UpdateSkill("Stamina", 0.5)
-        exports["B1-skillz"]:UpdateSkill("Strength", 0.5)
        end
 else
     lib.notify({
