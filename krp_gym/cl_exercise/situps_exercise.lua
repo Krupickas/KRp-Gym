@@ -7,7 +7,6 @@ exports.qtarget:AddCircleZone("situps", vec3(-1201.2391, -1566.6486, 4.0158), 0.
         {
             action = function()
                 local playerPed = GetPlayerPed(-1)
-                FreezeEntityPosition(playerPed, true)
                 SetEntityCoords(playerPed, -1201.2391, -1566.6486, 4.0158, 0, 0, 0, true)
                 SetEntityHeading(playerPed, 218.7526)
                 TaskStartScenarioInPlace(playerPed, "world_human_sit_ups", 0, true)
@@ -62,12 +61,11 @@ exports.qtarget:AddCircleZone("situps2", vec3(-1203.4559, -1567.7660, 4.0093), 0
         {
             action = function()
                 local playerPed = GetPlayerPed(-1)
-                FreezeEntityPosition(playerPed, true)
                 SetEntityCoords(playerPed, -1203.4559, -1567.7660, 4.0093, 0, 0, 0, true)
                 SetEntityHeading(playerPed, 218.7526)
                 TaskStartScenarioInPlace(playerPed, "world_human_sit_ups", 0, true)
 Wait(5000)
-local situps = lib.skillCheck({'easy', 'easy', 'easy', 'easy', 'easy', {areaSize = 60, speedMultiplier = 1}, 'medium'})
+local situpsa = lib.skillCheck({'easy', 'easy', 'easy', 'easy', 'easy', {areaSize = 60, speedMultiplier = 1}, 'medium'})
 if situpsa then
     lib.notify({
         title = 'Gym',
