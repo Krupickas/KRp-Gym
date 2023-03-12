@@ -22,23 +22,3 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
       end
   end)
 
-  -------------- qb
-
-  QBCore.Functions.CreateCallback('krp_gym:checkitem', function(source, cb, item)
-    local _source = source
-    local Player = QBCore.Functions.GetPlayer(source)
-    local items = Player.inventory
-
-    cb(exports.ox_inventory:Search(source, 'count', item))
-  end)
-
-  QBCore.Functions.CreateCallback('krp_shop:buy', function(source, cb, price, item, pocet)
-    local Player = QBCore.Functions.GetPlayer(source)
-    if Player.getMoney() >= price then
-      Player.removeMoney(price)
-      Player.addInventoryItem(item, pocet)
-        cb(true)
-    else
-        cb(false)    
-    end
-end)
